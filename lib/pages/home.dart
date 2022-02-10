@@ -228,8 +228,11 @@ class _HomeState extends State<Home> {
           SizedBox(height: 20.0),
           Expanded(
             child: Container(
-              width: 175.0,
+
+              //the line below makes a widget fill the width of a parent container
+              constraints: BoxConstraints.expand(),
               decoration: BoxDecoration(
+
                 color: status == 'Away' ? Colors.grey : Colors.green,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(10.0),
